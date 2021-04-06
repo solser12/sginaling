@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Boni Garcia (bgarcia@gsyc.es)
  * @since 5.0.0
  */
-// TextWebSocketHandler에서 WebSocket 요청을 처리하도록 구현
+@Component
 public class SignalingHandler extends TextWebSocketHandler {
 
   private static final Logger log = LoggerFactory.getLogger(SignalingHandler.class);
