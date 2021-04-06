@@ -38,5 +38,4 @@ public class SignalingApplication implements WebSocketConfigurer {
     public static void main(String[] args) {
         SpringApplication.run(SignalingApplication.class, args);
     }
-
 }
