@@ -3,21 +3,18 @@ package com.pet.signaling;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.pet.signaling.UserSession;
 import org.kurento.client.*;
 import org.kurento.jsonrpc.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -27,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 5.0.0
  */
 // TextWebSocketHandler에서 WebSocket 요청을 처리하도록 구현
+@Component
 public class SignalingHandler extends TextWebSocketHandler {
 
   private static final Logger log = LoggerFactory.getLogger(SignalingHandler.class);
